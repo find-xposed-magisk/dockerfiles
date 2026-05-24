@@ -1,7 +1,7 @@
 FROM debian:bullseye
 LABEL maintainer="Stille <stille@ioiox.com>"
 
-ENV VERSION 9.8.3
+ENV VERSION 9.9.0
 
 RUN apt update && \
     apt install -y wget curl bash util-linux procps && \

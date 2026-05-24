@@ -876,8 +876,9 @@ uninstall_client() {
 follow_log_stream() {
     [ -f "$LOG_FILE" ] || touch "$LOG_FILE"
     print_green "► 正在查看日志（Ctrl+C 退出）..."
+    print_gray "• 默认显示最近 50 行，避免首次登录凭据被日志尾部截断。"
     echo
-    tail -f "$LOG_FILE"
+    tail -n 50 -f "$LOG_FILE"
 }
 
 tail_log() { follow_log_stream; }
